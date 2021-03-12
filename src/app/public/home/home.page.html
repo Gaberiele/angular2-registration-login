@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title align="center">
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+  <div  id="contentHome" class="container">
+  <div *ngIf="user" class="logoutButton">
+    <p>Hello {{user}}</p>
+    <ion-button [routerLink]="['/home']" (click)="logout()" id="logoutButton" expand="block" color="secondary">Logout
+    </ion-button>
+  </div>
+    <div *ngIf="!user" class="loginButton">
+      <ion-button [routerLink]="['/login']" id="loginButton" expand="block" color="primary">Login
+      </ion-button>
+    </div>
+
+    <div *ngIf="!user" class="registerButton">
+    <ion-button [routerLink]="['/register']" id="Signup" expand="block" color="danger">SignUp
+    </ion-button>
+  </div>
+</div>

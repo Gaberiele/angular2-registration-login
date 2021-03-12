@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title align="center">
+      Register
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<div class="container">
+  <form [formGroup]="registrationForm" novalidate (ngSubmit)="onSubmit()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-lg="6" sizeMd="4" size="12">
+          <div class="div_registration">
+            <label class="label_registration"> Name</label>
+            <input class="form-control" type="text" id="name_register" name="name_register">
+          </div>
+        </ion-col>
+        <ion-col size-lg="6" size="12">
+          <div class="div_registration">
+            <label class="label_registration"> Surname </label>
+            <input class="form-control" type="text" id="surname_register" name="surname_register">
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-lg="6" size="12">
+          <div class="div_registration">
+            <label class="label_registration">Cellular *</label>
+            <input class="form-control" formControlName="cellular" type="text"
+                   [ngClass]="{ 'invalid': register && form.cellular.errors }"/>
+            <div *ngIf="register && form.cellular.errors" class="invalidMessage">
+              <div *ngIf="form.cellular.errors.required">Cellular is required</div>
+              <div *ngIf="form.cellular.errors.minlength">Cellular length invalid</div>
+              <div *ngIf="form.cellular.errors.pattern">Cellular format invalid</div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-lg="6" size="12">
+          <div class="div_registration">
+            <label class="label_registration">Email *</label>
+            <input class="form-control" formControlName="email" type="text"
+                   [ngClass]="{ 'invalid': register && form.email.errors }"/>
+            <div *ngIf="register && form.email.errors" class="invalidMessage">
+              <div *ngIf="form.email.errors.required">Email is required</div>
+              <div *ngIf="form.email.errors.email">Email is not valid</div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size-lg="6" size="12">
+          <div class="div_registration">
+            <label class="label_registration">Username *</label>
+            <input class="form-control" formControlName="username" type="text"
+                   [ngClass]="{ 'invalid': register && form.username.errors }"/>
+            <div *ngIf="register && form.username.errors" class="invalidMessage">
+              <div *ngIf="form.username.errors.required">Username is required</div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-lg="6" size="12">
+          <div class="div_registration">
+            <label class="label_registration">Password *</label>
+            <input class="form-control" formControlName="password" type="password"
+                   [ngClass]="{ 'invalid': register && form.password.errors }"/>
+            <div *ngIf="register && form.password.errors" class="invalidMessage">
+              <div *ngIf="form.password.errors.required">Password is required</div>
+              <div *ngIf="form.password.errors.minlength">Min 6 characters</div>
+            </div>
+          </div>
+        </ion-col>
+        <ion-col size-lg="6" size="12">
+          <div class="div_registration">
+            <label class="label_registration">Confirm Password *</label>
+            <input class="form-control" formControlName="r_password" type="password"
+                   [ngClass]="{ 'invalid': register && form.r_password.errors }"/>
+            <div *ngIf="register && form.r_password.errors" class="invalidMessage">
+              <div *ngIf="form.r_password.errors.required">Password is required</div>
+              <div *ngIf="form.r_password.errors.match">Password not Match</div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button id="registrationButton" class="registerButton" type="submit" color="danger">Sign Up</ion-button>
+  </form>
+</div>

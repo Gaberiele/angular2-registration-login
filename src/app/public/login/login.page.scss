@@ -1,0 +1,96 @@
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 10% 0 0 10%;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 16px;
+
+  resize: vertical;
+}
+
+input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 16px;
+
+  resize: vertical;
+}
+
+.loginButton {
+  color: white;
+  margin-top: 16px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+ion-col {
+  padding: 0;
+}
+
+ion-grid {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+}
+
+
+.invalidMessage {
+  margin-top: -2px;
+  padding-top: 3px;
+  z-index: 2;
+  color: white;
+  height: 30px;
+  text-align: left;
+  width: 100%;
+  background-color: #a94442;
+  border: 2px solid #a94442; /* red */
+}
+
+.div_login {
+  width: 100%;
+  margin-right: 30px;
+}
+
+.invalid {
+  border: 1px solid #a94442 !important;
+}
+
+ion-title {
+  margin-left: -24px;
+  width: 100%;
+}
+
+.label_login {
+  float: left;
+  padding-top: 29px;
+}

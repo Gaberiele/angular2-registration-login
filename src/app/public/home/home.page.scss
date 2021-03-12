@@ -1,0 +1,40 @@
+// HOME
+.contentHome {
+}
+p{
+  text-align: center;
+}
+
+.titleHome {
+  text-align: center;
+  font-size: 40px;
+  color: #7974ff;
+  width: 100%;
+}
+
+.loginButton {
+  display: flex;
+  justify-content: center;
+}
+
+.loginButton ion-button {
+  width: 100%;
+}
+.registerButton ion-button {
+  width: 100%;
+}
+.registerButton {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.container{
+  margin: auto;
+width: 300px;
+}
+
+
+.orSignup {
+  display: flex;
+  justify-content: center;
+}

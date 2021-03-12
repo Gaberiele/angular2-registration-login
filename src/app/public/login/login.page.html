@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title align="center">
+      Login
+    </ion-title>
+  </ion-toolbar>
+
+</ion-header>
+<div class="container">
+  <form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-lg="12" size="12">
+          <div class="div_login">
+            <label class="label_login"> Username </label>
+            <input type="text" formControlName="username" class="form-control"
+                   [ngClass]="{ 'invalid': submitted && form.username.errors }"/>
+            <div *ngIf="submitted && form.username.errors" class="invalidMessage">
+              <div *ngIf="form.username.errors.required">Username is required</div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-lg="12" size="12">
+          <div class="div_login">
+            <label class="label_login"> Password </label>
+            <input class="form-control" formControlName="password" type="password"
+                   [ngClass]="{ 'invalid': submitted && form.password.errors }"/>
+            <div *ngIf="submitted && form.password.errors" class="invalidMessage">
+              <div *ngIf="form.password.errors.required">Password is required</div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button (click)="onSubmit()" class="loginButton" type="submit" id="submit" color="primary" routerDirection="">
+      Login
+    </ion-button>
+  </form>
+</div>

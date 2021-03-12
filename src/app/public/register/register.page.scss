@@ -1,0 +1,86 @@
+
+.invalid {
+  border: 1px solid #ea6153;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ion-title {
+  margin-left: -24px;
+  width: 100%;
+}
+
+input[type=text], input[type=password] {
+  margin-right: 20px;
+  color: black;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: left;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+ion-select {
+  --placeholder-opacity: 0.6 !important;
+  color: black;
+}
+
+.registerButton {
+  color: #CCCCCC;
+  margin-top: 16px;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+ion-scroll {
+  white-space: nowrap;
+  height: 500px;
+}
+
+.label_registration {
+  float: left;
+  padding-bottom: 10px;
+}
+
+.container {
+  text-align: center;
+  overflow-x: scroll !important;
+  margin: auto;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.div_registration {
+  width: 100%;
+  margin-right: 30px;
+}
+
+.invalidMessage {
+  padding-top: 3px;
+  z-index: 2;
+  color: white;
+  display: block;
+  height: 30px;
+  margin-top: -17px;
+  width: 100%;
+  text-align: left;
+  background-color: #a94442;
+  border: 2px solid #a94442; /* red */
+}
+
+.invalid {
+  border: 1px solid #a94442 !important;
+}
